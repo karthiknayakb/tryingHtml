@@ -1,0 +1,43 @@
+
+
+body{
+	background: #3b3a66;
+	background-size: cover;
+	background-position: center;
+	font-family: Lato;
+	color: white;
+}
+
+
+h1{
+	font-weight: 700;
+	font-size: 5em;
+}
+
+html{
+	height:100%;
+}
+
+hr{
+	width:400px;
+	border-top:1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.project{
+	color:#2e324f;
+	max-width: 45%;
+	margin: 6% auto;
+	padding-left: 4%;
+	border-radius: 7px;
+}
+
+.details{
+	background-color: #bac3d1;
+	margin-top: 5%;
+	margin-left: 6%;
+	padding: 2% 0;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	font-size: 2.0rem;
+}
