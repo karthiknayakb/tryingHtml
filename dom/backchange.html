@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>backc</title>
+	<style type="text/css">
+		.purp{
+			background: purple;
+		}
+	</style>
+</head>
+<body>
+	<button>change!</button>
+</body>
+<script type="text/javascript">
+	flag=true
+	document.querySelector("button").addEventListener("click",function(){
+
+		
+		//if(flag){
+		//	document.body.style.background = "pink"	
+		//}
+		//else{
+		//	document.body.style.background = "red"
+		//}
+		//flag = !flag
+		document.body.classList.toggle("purp")
+
+
+	})
+</script>
+</html>
