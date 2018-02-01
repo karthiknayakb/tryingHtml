@@ -8,4 +8,8 @@ function loadLinks(){
     return linkTags
 }
 
-console.log(loadLinks());
+links = loadLinks().sort()
+for(i=0;i<links.length;i++){
+	console.log("infor")
+	$("#details").append("<li>"+links[i]+"</li>")	
+}
