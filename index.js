@@ -1,19 +1,11 @@
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
-            }
-        }
+function loadLinks(){
+    linkTags=[]
+    for(i=0;i<data.length;i++){
+        f = data[i]["link"].split('/');
+        f = f[f.length -1]
+        linkTags.push("<a href='"+data[i]['link']+"'>"+f+"</a>");
     }
-    rawFile.send(null);
+    return linkTags
 }
 
-console.log(readTextFile("links.txt"));
+console.log(loadLinks());
