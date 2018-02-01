@@ -1,0 +1,25 @@
+/07_ImageBlog1/imageLinks.html
+/navbar3.html
+/07_ImageBlog1/imageblog.html
+/jQuery/jqueryTry.html
+/form.html
+/navbar2.html
+/javascript/firstjs.html
+/javascript/agecalc.html
+/colorgame/colorgame.html
+/image gallery/gallery.html
+/scorekeeper/scorekeeper.html
+/todolist.html
+/firstpage.html
+/pokemondata.html
+/navbar.html
+/dom/trydom.html
+/index.html
+/dom/backchange.html
+/ttt/ttt.html
+/landingpage/index.html
+/checkhtml.html
+/blogpro/blog.html
+/dogpage.html
+/09_Selector_Exercise_Starter/selectorsExercise.html
+/04_Navbars/navbars.html
