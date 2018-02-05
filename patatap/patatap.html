@@ -9,18 +9,25 @@
 		
 		aa = [];
 		function onKeyDown(event) {
-		var maxPoint = new Point(view.size.width,view.size.height)
-		var point = Point.random()*maxPoint;
-		var myCircle = new Path.Circle(point, 170);
-		myCircle.fillColor = keyData[event.key].color;
-		keyData[event.key].sound.play();
-		aa.push(myCircle);
+			if(keyData[event.key]){
+				var maxPoint = new Point(view.size.width,view.size.height)
+				var point = Point.random()*maxPoint;
+				var myCircle = new Path.Circle(point, 170);
+				myCircle.fillColor = keyData[event.key].color;
+				keyData[event.key].sound.play();
+				aa.push(myCircle);
+			}
 		}
 
 		function onFrame(event) {
 			for(i=0;i<aa.length;i++){
 				aa[i].fillColor.hue += 1;
-				aa[i].scale(.93);
+				aa[i].scale(.9);
+				if(aa[i].area < 1){
+			      aa[i].remove(); // remove the circle from the canvas
+			      aa.splice(i, 1); // remove the circle from the array
+			      i--; // decrement i so that the loop doesn't skip a circle because of .splice()
+			    }
 			}
 		}
 			
