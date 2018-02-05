@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circles</title>
+	<script type="text/javascript" src="assets/lib/paper-full.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.min.js"></script>
+	<script type="text/javascript" src="sounds.js"></script>
+	<script type="text/paperscript" canvas="canvas">
+		
+		aa = [];
+		function onKeyDown(event) {
+		var maxPoint = new Point(view.size.width,view.size.height)
+		var point = Point.random()*maxPoint;
+		var myCircle = new Path.Circle(point, 170);
+		myCircle.fillColor = keyData[event.key].color;
+		keyData[event.key].sound.play();
+		aa.push(myCircle);
+		}
+
+		function onFrame(event) {
+			for(i=0;i<aa.length;i++){
+				aa[i].fillColor.hue += 1;
+				aa[i].scale(.93);
+			}
+		}
+			
+	</script>
+	<link rel="stylesheet" type="text/css" href="assets/css/circles.css">
+
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+</html>
